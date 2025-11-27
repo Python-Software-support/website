@@ -1,4 +1,4 @@
-<img src="../スクリプト画像\BGMプレイヤー画像.png" width="800"
+<img src="スクリプト画像\BGMプレイヤー画像.png" width="800"
      style="display:block; margin:20px auto;">
 
 ■ 1. WAV 再生エンジン（WavPlayer）
@@ -129,5 +129,6 @@
 ■ GUIスレッドと再生スレッドは完全非同期
 
 ■ track end 発生時は GUI スレッドへ root.after で通知
+
 
 ■ seek はフレーム単位で管理（秒換算は rate を使用）
