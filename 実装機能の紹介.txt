@@ -14,7 +14,7 @@
 ・設定1〜4起動ボタン
 ・JSONファイル選択 → selected_file_path.txt に書き込み
 
-<img src="../スクリプト画像/メインシステムUI画像.png" width="800"
+<img src="/スクリプト画像/メインシステムUI画像.png" width="800"
      style="display:block; margin:20px auto;">
 
 
@@ -22,7 +22,7 @@
 ・キャラの声質・話速・ピッチ・抑揚・音量・発声長設定。
 ・試聴 → 保存 → 反映まで一括。
 
-<img src="../スクリプト画像/メインシステム設定１画像.png" width="800"
+<img src="/スクリプト画像/メインシステム設定１画像.png" width="800"
      style="display:block; margin:20px auto;">
 
 
@@ -127,4 +127,5 @@
 ・ 指示反映の高速化  
 ・ 音声/映像/感情/ログの一元管理  
 ・ 手動操作の極小化  
+
 ・ 自動制御に特化した配信システム化
