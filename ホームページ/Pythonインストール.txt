@@ -1,0 +1,15 @@
+■ Python 3.13系
+
+■ Pythonライブラリ（pip）
+・requests  
+・pyaudio  
+・numpy  
+・soundfile  
+・simpleobsws  
+・customtkinter  
+・openai  
+・SpeechRecognition  
+・scikit-image  
+・scipy  
+・pillow  
+・pywin32
