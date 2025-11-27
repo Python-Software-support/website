@@ -234,9 +234,9 @@
 </div>
 
 <script>
-p.addEventListener("toggle", () => {
-  if (p.open) {
-    p.querySelector("summary").style.display = "none";
+p.addEventListener("toggle", async () => {
+  if (p.open && !c.innerHTML) {
+    c.innerHTML = await (await fetch("privacy.html")).text();
   }
 });
 </script>
@@ -442,6 +442,7 @@ Promise.all([
 
 </body>
 </html>
+
 
 
 
