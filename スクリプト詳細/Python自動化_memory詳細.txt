@@ -1,0 +1,58 @@
+
+■ 1. 基本設定
+
+・SOURCE_DIR に読み込むコード類のディレクトリを指定
+
+・DB_DIR に ChromaDB の永続保存先パスを指定
+
+・OpenAI API キーを環境変数から取得
+
+
+■ 2. ChromaDB 初期化
+
+・PersistentClient を DB_DIR に対して生成
+
+・既存コレクション「code_memory」を削除
+
+・新しいコレクション「code_memory」を作成して準備完了
+
+
+■ 3. ファイル収集処理（get_files）
+
+・.py / .json / .txt を再帰的に取得
+
+・glob を用いて Python自動化フォルダ以下の対象ファイルを全て収集
+
+
+■ 4. 埋め込み生成処理（create_embedding）
+
+・OpenAI の text-embedding-3-large を使用して embedding を生成
+
+・取得した埋め込みベクトルを返す
+
+
+■ 5. チャンク分割処理（split_text）
+
+・長すぎるテキストを max_length（7000字）ごとに分割
+
+・RAG 登録時の長文エラーを防ぐための前処理
+
+
+■ 6. ファイル登録処理（register_files）
+
+・収集したファイルを順に読み込み
+
+・空ファイルはスキップ
+
+・ファイル内容をチャンク化し FILE: ファイル名 を先頭に付与
+
+・各チャンクを embedding 生成 → ChromaDB に add して保存
+
+・メタデータとしてファイルパスと chunk_id を登録
+
+
+■ 7. 完了ログ出力
+
+・各ファイルごとに「登録完了」を表示
+
+・全ファイル処理後に「すべてのファイルを保存しました。」を表示

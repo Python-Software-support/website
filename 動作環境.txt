@@ -1,0 +1,25 @@
+■ OS  
+・Windows 10 / 11（64bit）※ Mac / Linux 非対応
+
+■ CPU  
+・Intel / AMD 6コア以上（Core i5 / Ryzen5 クラス以上）
+
+■ メモリ  
+・16GB 以上（32GB 推奨）
+
+■ GPU（必須）  
+・NVIDIA GeForce GTX1650 以上  
+※ 内蔵GPUは対象外  
+※ GPU無いPCは対象外
+
+■ ストレージ  
+・SSD 必須
+
+■ ネットワーク  
+・高速インターネット回線（OpenAI API 用）
+
+■ VOICEVOX（ローカル版）
+
+■ OBS Studio（WebSocket 5.x 対応版）
+
+■ Visual Studio Build Tools 2022

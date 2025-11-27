@@ -1,0 +1,29 @@
+
+■ 1. 辞書ファイルの読み込み
+
+・voicevox-engine の user_dict.json を UTF-8 で読み込む
+
+・JSON としてパースし内部データを取得
+
+
+■ 2. JSON の整形
+
+・インデント付き（2 スペース）で美しい JSON に変換
+
+・ensure_ascii=False で日本語をそのまま保持
+
+・セパレータを指定し読みやすい形式に整形
+
+
+■ 3. 辞書ファイルの上書き保存
+
+・整形済み JSON を user_dict.json へ再書き込み
+
+・末尾に改行を追加して保存
+
+
+■ 4. コピー作成
+
+・整形後の user_dict.json を user_dict_copy.json へコピー
+
+・copy2 によりメタデータ（更新日時など）も保持
