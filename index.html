@@ -265,6 +265,11 @@ AI連携ツールから配信補助ツールまで、一つの環境で活用で
             </p>
         </div>
 
+<details id="flow" class="desc-box" style="margin-top:20px;">
+    <summary style="font-size:18px; color:#4da6ff; cursor:pointer;">依頼の流れ</summary>
+    <div id="flow_content" class="desc-content" style="white-space:normal;"></div>
+</details>
+        
 <details id="pay" class="desc-box" style="margin-top:20px;">
     <summary style="font-size:18px; color:#4da6ff; cursor:pointer;">決済方法</summary>
     <div id="pay_content" class="desc-content" style="white-space:normal;"></div>
@@ -283,13 +288,18 @@ AI連携ツールから配信補助ツールまで、一つの環境で活用で
     </div>
 
     <script>
-        p.addEventListener("toggle", async () => {
-            if (p.open && !c.innerHTML) {
-                c.innerHTML = await (await fetch("privacy.html?v=" + Date.now())).text();
+        const flow = document.getElementById("flow");
+        const flow_content = document.getElementById("flow_content");
+
+        flow.addEventListener("toggle", async () => {
+            if (flow.open && !flow_content.innerHTML) {
+                flow_content.innerHTML = await (
+                    await fetch("依頼の流れ.html?v=" + Date.now())
+                ).text();
             }
         });
     </script>
-
+    
     <script>
         const pay = document.getElementById("pay");
         const pay_content = document.getElementById("pay_content");
@@ -297,6 +307,14 @@ AI連携ツールから配信補助ツールまで、一つの環境で活用で
         pay.addEventListener("toggle", async () => {
             if (pay.open && !pay_content.innerHTML) {
                 pay_content.innerHTML = await (await fetch("決済方法.html?v=" + Date.now())).text();
+            }
+        });
+    </script>
+    
+    <script>
+        p.addEventListener("toggle", async () => {
+            if (p.open && !c.innerHTML) {
+                c.innerHTML = await (await fetch("privacy.html?v=" + Date.now())).text();
             }
         });
     </script>
@@ -504,6 +522,7 @@ AI連携ツールから配信補助ツールまで、一つの環境で活用で
 
 
 </html>
+
 
 
 
