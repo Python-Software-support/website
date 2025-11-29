@@ -22,4 +22,12 @@
 
 ■ OBS Studio（WebSocket 5.x 対応版）
 
+
 ■ Visual Studio Build Tools 2022
+
+
+・OpenAI APIキー
+・OBS_WS_TOKEN
+・キャラ立ち絵素材（PNG）  
+・表情差分素材（PNG）  
+・OBSアニメーション動画
