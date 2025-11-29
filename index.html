@@ -294,7 +294,7 @@ AI連携ツールから配信補助ツールまで、一つの環境で活用で
         flow.addEventListener("toggle", async () => {
             if (flow.open && !flow_content.innerHTML) {
                 flow_content.innerHTML = await (
-                    await fetch("依頼の流れ.html?v=" + Date.now())
+                    await fetch("依頼から納品までの流れ.html?v=" + Date.now())
                 ).text();
             }
         });
@@ -522,23 +522,3 @@ AI連携ツールから配信補助ツールまで、一つの環境で活用で
 
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
