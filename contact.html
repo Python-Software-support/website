@@ -207,7 +207,7 @@ document.getElementById("submit-btn").addEventListener("click", function () {
     const email = document.querySelectorAll(".input")[1].value.trim();
     const message = document.querySelectorAll(".input")[2].value.trim();
 
-    fetch("https://mail-api-kpvd.onrender.com/send", {
+    fetch("https://127.0.0.1:8000/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message })
