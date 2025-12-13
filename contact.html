@@ -134,13 +134,13 @@
         <div class="title">お問い合わせフォーム</div>
 
         <div class="label">名前</div>
-        <input type="text" id="name" class="input">
+        <input type="text" class="input">
 
         <div class="label" style="margin-top: 20px;">メールアドレス</div>
-        <input type="email" id="email" class="input">
+        <input type="email" class="input">
 
         <div class="label" style="margin-top: 20px;">お問い合わせ内容</div>
-        <textarea id="message" class="input"></textarea>
+        <textarea class="input"></textarea>
 
         <button class="send-btn" type="button">確認画面</button>
     </div>
@@ -166,10 +166,9 @@
 <script>
 document.querySelector(".form-container .send-btn").addEventListener("click", function () {
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
-
+    const name = document.querySelectorAll(".input")[0].value.trim();
+    const email = document.querySelectorAll(".input")[1].value.trim();
+    const message = document.querySelectorAll(".input")[2].value.trim();
 
     // 必須チェック
     if (!name || !email || !message) {
@@ -204,9 +203,9 @@ document.getElementById("back-btn").addEventListener("click", function () {
 
 document.getElementById("submit-btn").addEventListener("click", function () {
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
+    const name = document.querySelectorAll(".input")[0].value.trim();
+    const email = document.querySelectorAll(".input")[1].value.trim();
+    const message = document.querySelectorAll(".input")[2].value.trim();
 
     fetch("https://mail-api-kpvd.onrender.com/send", {
         method: "POST",
@@ -224,9 +223,9 @@ document.getElementById("submit-btn").addEventListener("click", function () {
         document.getElementById("confirm-screen").style.display = "none";
         document.querySelector(".form-container").style.display = "block";
 
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("message").value = "";
+        document.querySelectorAll(".input")[0].value = "";
+        document.querySelectorAll(".input")[1].value = "";
+        document.querySelectorAll(".input")[2].value = "";
     })
     .catch(() => {
         alert("送信に失敗しました。");
